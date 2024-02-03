@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node ./build/app.js",
-    "build": "tsc",
+    "build": "npx tsc",
     "watch": "tsc -w",
     "dev": "nodemon ./build/app.js"
   },
