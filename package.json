@@ -30,7 +30,8 @@
     "stripe": "^14.13.0",
     "tsc": "^2.0.4",
     "uuid": "^9.0.1",
-    "validator": "^13.11.0"
+    "validator": "^13.11.0",
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
