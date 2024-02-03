@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "start": "node ./build/app.js",
-    "build": "npx tsc",
-    "watch": "npx tsc -w",
-    "dev": "npx nodemon ./build/app.js"
+    "build": "tsc",
+    "watch": "tsc -w",
+    "dev": "nodemon ./build/app.js"
   },
   "author": "sourab",
   "license": "ISC",
