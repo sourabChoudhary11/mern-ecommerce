@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "node ./build/app.js",
-    "build": "npx tsc",
-    "watch": "npx tsc -w",
+    "build": "tsc",
+    "watch": "tsc -w",
     "dev": "nodemon ./build/app.js"
   },
   "author": "sourab",
@@ -20,7 +20,6 @@
     "kdsfsd"
   ],
   "dependencies": {
-    "typescript": "^5.3.3",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
@@ -41,6 +40,7 @@
     "@types/node": "^20.11.1",
     "@types/uuid": "^9.0.7",
     "@types/validator": "^13.11.8",
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.0.2",
+    "typescript": "^5.3.3"
   }
 }
