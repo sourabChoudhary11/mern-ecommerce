@@ -3,11 +3,13 @@ import { NextFunction, Request, Response } from "express";
 export interface New_User_Request_Body {
     name: string;
     email: string;
-    photo: string;
     gender: string;
-    role: string;
-    _id: string;
     dob: Date;
+    password: string;
+}
+export interface Login_User_Request_Body {
+    email: string;
+    password: string;
 }
 
 export interface New_Product_Request_Body {

@@ -11,6 +11,7 @@ interface IUser extends Document {
     dob: Date;
     createdAt: Date;
     updatedAt: Date;
+    password: string;
     // Virtual Attribute
     age: number;
 }
@@ -48,7 +49,11 @@ const schema = new mongoose.Schema({
         type: Date,
         required: [true, "Please Enter DOB"],
     },
-
+    password: {
+        type: String,
+        required: [true, "Please Enter Password"],
+        minLength: [8, "Password Must Have Atleast 8 Length"]
+    },
 },{
         timestamps: true
     })

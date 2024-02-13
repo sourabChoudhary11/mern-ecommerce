@@ -1,11 +1,17 @@
 import express from "express"
-import { deleteUser, getAllUsers, getSpecificUser, newUser } from "../controllers/user.js";
+import { deleteUser, getAllUsers, getSpecificUser, logOut, loginUser, newUser } from "../controllers/user.js";
 import { isAdmin } from "../middlewares/auth.js";
 
 const userRoute = express.Router();
 
 // Route - api/v1/user/new  --->  create a new user
 userRoute.post("/new", newUser);
+
+// Route - api/v1/user/login  --->  sign in user
+userRoute.post("/login", loginUser);
+
+// Route - api/v1/user/login  --->  sign in user
+userRoute.post("/logout", logOut);
 
 // Route - api/v1/user/all  --->  get all users
 userRoute.get("/all", isAdmin, getAllUsers);

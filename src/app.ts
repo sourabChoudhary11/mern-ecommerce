@@ -2,7 +2,8 @@ import express from "express";
 import { config } from "dotenv"
 import NodeCache from "node-cache";
 import morgan from "morgan";
-import cors from "cors"
+import cors from "cors";
+import cookieParser from "cookie-parser"
 
 import userRoute from "./routes/user.js";
 import { connectDB } from "./utils/features.js";
@@ -12,7 +13,6 @@ import orderRoute from "./routes/order.js";
 import paymentRoute from "./routes/payment.js";
 import dashboardRoute from "./routes/stats.js";
 import Stripe from "stripe";
-
 
 config({
     path:"./config.env"
@@ -30,6 +30,7 @@ export const myCache = new NodeCache();
 
 const app = express();
 
+app.use(cookieParser());
 app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
